@@ -1,0 +1,8 @@
+*.jar
+*.bak
+*.log
+*/playerdata/
+*/stats/
+logs/
+world2
+*.zip

@@ -1,0 +1,145 @@
+replace:
+  chat:
+    # Replace names in messages sent by players
+    player: true
+
+    # Replaces names in ALL outgoing messages
+    out: false
+    in:
+      # Replace real names in incoming commands with the player's nickname
+      command: false
+      # Replace incoming command nicknames with the player's real name
+      # (If multiple players use the same nickname, it will default to the first available player's real name)
+      commandReverse: false
+
+      # Replace real names in general (non-command) incoming messages with the player's nickname
+      general: false
+      # Replace incoming nicknames with the player's real name
+      # (If multiple players use the same nickname, it will default to the first available player's real name)
+      generalReverse: false
+  scoreboard: false
+  scoreboardScore: false
+  scoreboardTeam: false
+  tabComplete:
+    chat: false
+
+updateSelf: true
+
+# Whether to allow offline players as command targets when changing nicks/skins
+allowOfflineTargets: false
+
+random:
+  join:
+    nick: false
+    skin: false
+  nick:
+  - "inventivetalent"
+  - "md_5"
+  - mojang: # Name category
+    - "jeb_"
+    - "Notch"
+    - "Dinnerbone"
+  skin:
+  - "md_5"
+  - "inventivetalent"
+
+names:
+  # Format for names, for example '&9%s' would color all names blue. Note: names can't be longer than 16 charcters and will be shortened.
+  format: "%s"
+
+  # Format for names in chat messages
+  chatFormat: "%s&r"
+
+  # Allow names with spaces. This replaces underscores ("_") in names with a space - Double underscores ("__") are displayed as single underscores.
+  spaces: false
+
+#Enable this if this server is behind a BungeeCord server
+bungeecord: false
+
+storage:
+  # Storage type
+  # - temporary
+  #     saves all data in memory until the server is stopped
+  # - local (recommended)
+  #     creates a local database
+  # - sql
+  #     uses an SQL server
+  # - redis
+  #     uses a Redis server
+  type: "local"
+  sql:
+    address: "jdbc:mysql://localhost:3306/minecraft"
+    user: ""
+    pass: ""
+  redis:
+    host: "localhost"
+    port: 6379
+    pass: ""
+    max-connections: 4
+
+execution:
+
+  on-nick:
+    # Commands that should be executed by the console when players nick themselves.
+    console:
+      #- aCommand
+
+    # Commands that should be executed by players when they nick themselves.
+    player:
+      #- ping
+
+  on-unnick:
+    # Commands that should be executed by the console when players unnick themselves.
+    console:
+      #- aCommand
+
+    # Commands that should be executed by players when they unnick themselves.
+    player:
+      #- ping
+
+messages:
+  command:
+    name:
+      changed: "&aChanged &b%player%'s &aname to &b%name%&a."
+      cleared: "&aCleared &b%player%'s &aname"
+      list:
+        used: "&eUsed names:"
+        format: "&r%s &eis used by&r %s"
+      error:
+        length: "&cThe specified name is too long"
+        category:
+          unknown: "&cUnknown category: %s"
+        list:
+          empty: "&cThere are no used names"
+    skin:
+      changing: "&7Changing &b%player%'s &7skin to &b%skin%'s&7 skin..."
+      changed: "&aChanged &b%player%'s &askin to &b%skin%'s&a skin."
+      cleared: "&aCleared &b%player%'s &askin"
+      list:
+        used: "&eUsed skins:"
+        format: "&r%s &eis used by&r %s"
+      error:
+        length: "&cThe specified skin is too long"
+        category:
+          unknown: "&cUnknown category: %s"
+        list:
+          empty: "&cThere are no used skins"
+    offlineInfo: "&eThe requested player is currently offline. Changes will be applied when they come online."
+    error:
+      unknown: "&cUnknown error while executing command. See console for details."
+      permission: "&cYou are missing the following permission: %s"
+      illegalSender: "&cThis command is only available to players"
+      unhandled: "&cInternal exception. See console for details."
+      length:
+       short: "&cMissing arguments. Usage: %s"
+       long: "&cToo many arguments. Usage: %s"
+      parse: "&cFailed to parse argument '%s' to %s"
+      target:
+        notFound: "&cPlayer could not be found"
+
+# Disable the features below, if you're only interested in utilizing the API.
+pluginFeatures:
+  commands:
+    general: true
+    nick: true
+    skin: true

@@ -1,0 +1,86 @@
+bridge_plugin_url: http://localhost:25564
+simulator_url: http://localhost:8080
+refresh_rate_ms: 500
+main_doors:
+- 0,60,0
+- 0,60,1
+windows:
+  '1':
+    room_id: 1
+    coords:
+    - 25,64,0
+    - 26,64,0
+light_groups:
+  '1':
+    device_id: 1
+    use_active_block: REDSTONE_BLOCK
+    use_unactive_block: COBBLESTONE
+    activator_button: 327,74,191
+    activation_coords:
+    - 337,77,190
+    - 337,77,193
+    - 334,77,193
+    - 334,77,190
+    - 331,77,190
+    - 331,77,193
+    - 328,77,190
+    - 328,77,193
+  '2':
+    device_id: 2
+    use_active_block: REDSTONE_BLOCK
+    use_unactive_block: COBBLESTONE
+    activator_button: 324,76,191
+    activation_coords:
+    - 323,79,193
+    - 323,79,191
+    - 321,79,193
+    - 321,79,191
+    - 319,79,193
+    - 319,79,191
+  '3':
+    device_id: 3
+    use_active_block: REDSTONE_BLOCK
+    use_unactive_block: COBBLESTONE
+    activator_button: 317,76,196
+    activation_coords:
+    - 314,79,198
+    - 314,79,201
+    - 317,79,198
+    - 317,79,201
+  '4':
+    device_id: 4
+    use_active_block: REDSTONE_BLOCK
+    use_unactive_block: COBBLESTONE
+    activator_button: 321,76,196
+    activation_coords:
+    - 321,79,197
+    - 321,79,199
+    - 321,79,201
+    - 324,79,197
+    - 324,79,199
+    - 324,79,201
+    - 328,79,197
+    - 328,79,199
+    - 328,79,201
+  '5':
+    device_id: 5
+    use_active_block: REDSTONE_TORCH
+    use_unactive_block: AIR
+    activator_button: 325,71,186
+    activation_coords:
+    - 316,69,189
+    - 316,69,192
+    - 317,69,195
+    - 320,69,195
+    - 323,69,195
+    - 326,69,194
+    - 326,69,191
+    - 326,69,188
+    - 327,69,185
+    - 330,69,185
+    - 325,67,189
+    - 325,67,191
+    - 322,67,194
+    - 320,67,194
+    - 317,67,191
+    - 317,67,189
